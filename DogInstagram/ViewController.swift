@@ -1,19 +1,25 @@
-//
-//  ViewController.swift
-//  DogInstagram
-//
-//  Created by eric on 2024/11/19.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class MyTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // 其他初始化代碼
+
     }
 
+    // 隱藏 Section Header 高度
+    override func tableView(
+        _ tableView: UITableView, heightForHeaderInSection section: Int
+    ) -> CGFloat {
+        return 0  // 設置 Header 高度為 0
+    }
+
+    // (選擇性) 隱藏 Footer 高度
+    override func tableView(
+        _ tableView: UITableView, heightForFooterInSection section: Int
+    ) -> CGFloat {
+        return 0  // 設置 Footer 高度為 0
+    }
 
 }
-
